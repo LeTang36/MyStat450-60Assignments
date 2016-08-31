@@ -93,16 +93,7 @@ sd(many.Y)
 ```
 9. (1pt)  Create a new object called `many.Z` that creates 1000 realizations of $Z$.
 ```{r}
-one.Z <- function() {
-  sample.space <- c(3,5,7,9,11,13)
-  red.roll <- sample(sample.space,1)
-  white.roll <- sample(sample.space,1)
-  num.rolled <- c(red.roll,white.roll)
-  max.final <- max(num.rolled)
-  return(max.final)
-  }
-set.seed(2222)
-many.Z <- replicate(1000,one.Z())
+many.Z <- 2*many.Y+1
 ```
 10. (1pt)  What is the mean of $Z$?
 ```{r}
